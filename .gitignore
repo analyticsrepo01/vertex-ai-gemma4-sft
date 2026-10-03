@@ -1,0 +1,31 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Model checkpoints and weights (store in GCS or HF Hub instead)
+output-*/
+output_dir/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.lock
+
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Cloud SDK & OS
+.DS_Store
+*.log
+/tmp/

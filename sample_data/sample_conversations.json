@@ -1,0 +1,38 @@
+[
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "What is the typical daily throughput capacity for the Enterprise Payments Engine, and how does it scale under surge load?"
+      },
+      {
+        "from": "model",
+        "value": "The Enterprise Payments Engine maintains a baseline nominal throughput of approximately 25,000 transactions per second (TPS) across multi-region active-active clusters. During peak demand surges, such as fiscal quarter-ends or high-velocity retail events, autonomous horizontal pod autoscalers dynamically spin up worker instances to handle up to 60,000 TPS with sub-10ms p99 latency guarantees."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "How should our cloud infrastructure team configure Vertex AI Custom Training Jobs to run QLoRA with NVIDIA A100-80GB GPUs?"
+      },
+      {
+        "from": "model",
+        "value": "To run QLoRA on Vertex AI with an NVIDIA A100-80GB GPU, specify machine type `a2-ultragpu-1g` with accelerator type `NVIDIA_A100_80GB`. In your training script, initialize BitsAndBytesConfig with 4-bit NormalFloat (`load_in_4bit=True`, `bnb_4bit_quant_type='nf4'`). Ensure your checkpoints and datasets map directly through the `/gcs/` Cloud Storage FUSE path for frictionless distributed I/O."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Why does standard text-only SFT fail on Gemma 4 without a custom collator?"
+      },
+      {
+        "from": "model",
+        "value": "Gemma 4 is natively multimodal, incorporating unified text and vision embeddings. Its forward pass expects a tensor named `mm_token_type_ids` to distinguish between text tokens (index 0) and vision tokens (index 1). Standard text collators omit this field, causing a tensor validation crash. Injecting a zero-filled `mm_token_type_ids` tensor via `Gemma4TextDataCollator` satisfies the architecture's contract for text-only instruction tuning."
+      }
+    ]
+  }
+]

@@ -6,6 +6,10 @@
 [![Model](https://img.shields.io/badge/Model-Google_Gemma_4_31B_Dense-black)](#)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
+<p align="center">
+  <img src="assets/architecture_banner.png" alt="Vertex AI Gemma 4 SFT Architecture Banner" width="100%" />
+</p>
+
 An enterprise-grade, reproducible pipeline for Supervised Fine-Tuning (SFT) and QLoRA of **Google's Gemma 4 (31B Dense and E4B)** on **Google Cloud Vertex AI** utilizing **NVIDIA H100 and A100 (80GB)** GPUs.
 
 ---

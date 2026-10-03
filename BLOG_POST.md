@@ -2,6 +2,10 @@
 
 *A deep dive into distributed QLoRA, multimodal tensor alignment, and cloud-native MLOps with Google's latest open-weight model.*
 
+<p align="center">
+  <img src="assets/architecture_banner.png" alt="Vertex AI Gemma 4 SFT Architecture Banner" width="100%" />
+</p>
+
 ---
 
 ## Introduction
